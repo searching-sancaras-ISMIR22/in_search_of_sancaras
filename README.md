@@ -1,5 +1,5 @@
 
-## In Search of Sañcāras - Tradition Informed Repeated Melodic Pattern Discovery in Carnatic Music
+## In Search of Sañcāras - Tradition-Informed Repeated Melodic Pattern Discovery in Carnatic Music
 
 This repository contains the accompanying code for the ISMIR 2022 submission:
 
