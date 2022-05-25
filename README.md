@@ -22,17 +22,39 @@ All datasets and models presented in the paper are made available...
 | Source Separated Audio       | SCV dataset after Spleeter source separation                        | [zenodo](url)                               |
 **Table 1** - All data relevant to task
 
-### 3. Code Usage
+### 3. Overview of Process
 
-#### 3.1 Install
+Include diagram here
+
+### 4. Code Usage
+
+#### 4.1 Install
 Requires Python 3.8, to install requirements...
+
 `pip install -r requirements.txt`
 
-#### 3.2 Relevant dependencies
+#### 4.2 Relevant dependencies
 The pipeline requires a model trained using the Complex Autoencoder architecture [github](https://github.com/SonyCSLParis/cae-invar) and pitch annotations of the predominant melodic line extracted using FTA-NET trained on the SCMS dataset [github](https://github.com/TISMIR22-Carnatic/carnatic-pitch-patterns)  (see **Table 1** in **2. Data** for data and models)
 
-#### 3.3 Configure
+#### 4.3 Configure
 
-#### 3.4 Run
+To configure the pipeline update the configuration file at `conf/conf.yaml`, in that folder you will find a README detailing each parameters function.
 
-### 4. Reproducibility
+#### 4.4 Run
+
+To run the pipeline using the parameters specified in `conf/conf.yaml`:
+
+```
+python src run --config conf/conf.yaml
+```
+### 5. Reproducibility
+
+`experiments/` contains various one-off scripts related to the development process and paper. The following are relevant to reproduce the paper results...
+
+Gridsearch for optimum parameters - `python experiments/gridsearch.py`
+Generate results for performances in paper - `python experiments/get_results.py`
+Reproduce plots in paper - `python experiments/plots_for_paper.py`
+Generate results for various un-annotated tracks - `python experiments/random_results.py`
+Evaluate - `python experiments/evaluate.py`
+
+
