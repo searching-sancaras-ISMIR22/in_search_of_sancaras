@@ -1,10 +1,8 @@
-
-
-## In Search of Sañcāras - Tradition-Informed Repeated Melodic Pattern Discovery in Carnatic Music
+## In Search of Sañcāras - Tradition-Informed Repeated Melodic Pattern Recognition in Carnatic Music
 
 This repository contains the accompanying code for the ISMIR 2022 submission:
 
-`A. Anonymous: In Search of Sañcāras - Tradition-Informed Repeated Melodic Pattern Discovery in Carnatic Music. [In Review for the] Proceedings of the 23rd International Society for Music Information Retrieval Conference, ISMIR 2022, Bangalore, India.`
+`A. Anonymous: In Search of Sañcāras - Tradition-Informed Repeated Melodic Pattern Recognition in Carnatic Music. [In Review for the] Proceedings of the 23rd International Society for Music Information Retrieval Conference, ISMIR 2022, Bangalore, India.`
 
 ### 1. Results Explorer
 You can explore all results presented in the paper, and more, using the Google Colab notebook  [here](https://colab.research.google.com/drive/115wznvNTr0cdaKN3EBWuCJMz3n-A7P-J?usp=sharing). This includes pitch plots and audio corresponding to the pattern groups returned for a selection of Carnatic performances in the [Saraga Dataset](https://mtg.github.io/saraga/).
