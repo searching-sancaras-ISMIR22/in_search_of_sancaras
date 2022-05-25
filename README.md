@@ -9,6 +9,8 @@ This repository contains the accompanying code for the ISMIR 2022 submission:
 ### 1. Results Explorer
 You can explore all results presented in the paper, and more, using the Google Colab notebook  [here](https://colab.research.google.com/drive/115wznvNTr0cdaKN3EBWuCJMz3n-A7P-J?usp=sharing). This includes pitch plots and audio corresponding to the pattern groups returned for a selection of Carnatic performances in the [Saraga Dataset](https://mtg.github.io/saraga/).
 
+The pitch plots corresponding to the paper results are also available in `ouput/for_paper/pitch_plots/`.
+
 ### 2. Data
 All datasets and models presented in the paper are made available...
 | **Data**                     | **Description**                                                     | **Location**                                |
