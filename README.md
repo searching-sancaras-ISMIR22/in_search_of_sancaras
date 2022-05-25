@@ -47,6 +47,9 @@ To run the pipeline using the parameters specified in `conf/conf.yaml`:
 ```
 python src run --config conf/conf.yaml
 ```
+
+Output will be stored to folder defined in `conf/conf.yaml`
+
 ### 5. Reproducibility
 
 `experiments/` contains various one-off scripts related to the development process and paper. The following are relevant to reproduce the paper results...	
