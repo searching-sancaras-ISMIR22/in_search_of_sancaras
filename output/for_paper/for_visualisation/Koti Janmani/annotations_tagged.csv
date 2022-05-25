@@ -1,0 +1,137 @@
+tier,s1,s2,text,match,group_num,occ_num
+underlying_sancara,5.2,8.3,mgmpmmgrg,no match,,
+underlying_full_phrase,67.4,72.3,ppmmgmpgpmgrs,match,2.0,0.0
+underlying_sancara,69.1,72.3,mmgmpgpmgrs,match,2.0,0.0
+underlying_sancara,72.5,75.2,sssnnpn,match,25.0,1.0
+underlying_sancara,75.4,78.8,smmggmggrs,no match,,
+underlying_full_phrase,79.3,84.0,ppmmgmpgpmgrs,match,2.0,1.0
+underlying_sancara,80.9,84.0,mmgmpgpmgrs,match,2.0,1.0
+underlying_sancara,84.4,87.2,sssnnpn,match,25.0,0.0
+underlying_sancara,87.2,90.5,smmggmggrs,match,26.0,0.0
+underlying_full_phrase,90.8,95.4,nnsndmmmgmpgpmgrs,match,2.0,3.0
+underlying_sancara,92.6,95.4,mmgmpgpmgrs,match,2.0,3.0
+underlying_sancara,95.6,98.4,sssnnpn,match,1.0,6.0
+underlying_sancara,98.7,101.6,smmggmggrs,no match,,
+underlying_full_phrase,102.3,106.9,nnsndmmmgmpgpmgrs,match,2.0,2.0
+underlying_sancara,103.9,106.9,mmgmpgpmgrs,match,2.0,2.0
+underlying_sancara,107.1,109.7,sssnnpn,match,1.0,7.0
+underlying_sancara,110.0,112.4,smmggmggrs,match,0.0,12.0
+underlying_sancara,113.0,115.5,sgrgmmgm,match,15.0,2.0
+underlying_full_phrase,113.0,118.3,sgrgmmgmmnnssss,no match,,
+underlying_sancara,115.7,118.3,mnnssss,no match,,
+underlying_sancara,118.4,121.2,nrsnsndm,match,6.0,1.0
+underlying_full_phrase,118.4,125.1,nrsnsndmgmpmgrgmgmn,match,16.0,0.0
+underlying_sancara,121.2,124.2,gmpmgrgm,match,19.0,0.0
+underlying_full_phrase,125.2,129.6,nnsndmmmgmpgpmgrs,no match,,
+underlying_sancara,126.8,129.6,mmgmpgpmgrs,match,2.0,6.0
+underlying_sancara,129.9,132.7,sssnnpn,match,1.0,3.0
+underlying_sancara,132.7,135.4,smmggmggrs,match,0.0,11.0
+underlying_sancara,135.5,138.4,sgrgmmgm,match,15.0,0.0
+underlying_full_phrase,135.6,141.2,sgrgmmgmmnnssss,no match,,
+underlying_sancara,138.5,141.2,mnnssss,no match,,
+underlying_sancara,141.3,144.1,nrsnsndm,match,6.0,3.0
+underlying_full_phrase,141.3,147.8,nrsnsndmgmpmgrgmgmn,match,16.0,1.0
+underlying_sancara,144.2,147.0,gmpmgrgm,match,19.0,1.0
+underlying_full_phrase,147.9,152.3,nnsndmmmgmpgpmgrs,match,2.0,4.0
+underlying_sancara,149.6,152.3,mmgmpgpmgrs,match,2.0,4.0
+underlying_sancara,152.6,155.4,sssnnpn,match,1.0,4.0
+underlying_sancara,159.1,162.3,mgmpmmgrg,match,5.0,1.0
+underlying_full_phrase,178.0,184.8,nnnnnnsndmgmnns,match,21.0,0.0
+underlying_sancara,180.0,183.5,nnnsndmgm,match,11.0,2.0
+underlying_full_phrase,185.1,189.5,sssndmnnsns,match,7.0,2.0
+underlying_sancara,186.8,189.5,nnsns,no match,,
+underlying_full_phrase,197.0,203.7,nnnnnnsndmgmnns,match,20.0,0.0
+underlying_sancara,198.7,202.3,nnnsndmgm,match,11.0,3.0
+underlying_full_phrase,203.9,207.6,sssndmnnsns,match,7.0,3.0
+underlying_sancara,205.4,207.6,nnsns,match,9.0,1.0
+underlying_full_phrase,207.7,214.4,nnnnnnsndmgmnns,match,22.0,0.0
+underlying_sancara,209.4,213.2,nnnsndmgm,match,12.0,2.0
+underlying_full_phrase,214.9,218.9,sssndmnnsns,match,7.0,1.0
+underlying_sancara,216.5,218.9,nnsns,match,9.0,0.0
+underlying_full_phrase,218.9,225.6,nnnnnnsndmgmnns,match,22.0,3.0
+underlying_sancara,220.7,224.4,nnnsndmgm,match,12.0,1.0
+underlying_sancara,225.9,229.6,sssndmnnsns,no match,,
+underlying_full_phrase,230.1,235.3,grsssnrsnndmgmn,match,23.0,1.0
+underlying_sancara,231.9,234.1,snrsnndm,no match,,
+underlying_full_phrase,235.5,240.4,ssnsrsndmmgmpmggrs,match,3.0,7.0
+underlying_sancara,237.5,240.4,mgmpmggrs,match,0.0,4.0
+underlying_full_phrase,240.9,246.1,grsssnrsnndmgmn,match,23.0,3.0
+underlying_sancara,242.7,244.8,snrsnndm,no match,,
+underlying_full_phrase,246.5,251.2,ssnsrsndmmgmpmggrs,match,0.0,1.0
+underlying_sancara,248.3,251.2,mgmpmggrs,match,0.0,1.0
+underlying_full_phrase,251.8,257.1,grsssnrsnndmgmn,match,23.0,0.0
+underlying_full_phrase,257.4,261.8,ssnsrsndmmgmpmggrs,match,0.0,8.0
+underlying_sancara,259.2,261.8,mgmpmggrs,match,0.0,8.0
+underlying_sancara,262.1,265.0,sgrgmmgm,match,15.0,1.0
+underlying_full_phrase,262.1,267.6,sgrgmmgmmnnssss,no match,,
+underlying_sancara,265.1,267.6,mnnssss,no match,,
+underlying_sancara,267.8,270.5,nrsnsndm,no match,,
+underlying_full_phrase,267.8,274.2,nrsnsndmgmpmgrgmgmn,match,16.0,2.0
+underlying_sancara,270.5,273.2,gmpmgrgm,match,19.0,2.0
+underlying_full_phrase,274.2,278.4,nnsndmmmgmpgpmgrs,match,2.0,5.0
+underlying_sancara,275.7,278.4,mmgmpgpmgrs,match,2.0,5.0
+underlying_sancara,278.6,281.3,sssnnpn,match,1.0,0.0
+underlying_sancara,302.9,305.5,pmgrs,no match,,
+underlying_full_phrase,302.9,308.5,pmgrssssnnpn,no match,,
+underlying_sancara,305.5,308.4,sssnnpn,no match,,
+underlying_sancara,308.7,310.9,ssgrg,no match,,
+underlying_full_phrase,308.7,313.5,ssgrgmgmpmggrs,match,0.0,6.0
+underlying_sancara,310.9,313.5,mgmpmggrs,match,0.0,6.0
+underlying_sancara,313.8,316.3,pmgrs,match,33.0,1.0
+underlying_full_phrase,313.8,319.1,pmgrssssnnpn,no match,,
+underlying_sancara,316.5,319.1,sssnnpn,match,1.0,1.0
+underlying_sancara,319.7,321.9,ssgrg,no match,,
+underlying_full_phrase,319.7,324.6,ssgrgmgmpmggrs,match,3.0,2.0
+underlying_sancara,321.9,324.6,mgmpmggrs,match,0.0,10.0
+underlying_sancara,324.7,327.1,pmgrs,match,33.0,0.0
+underlying_full_phrase,324.7,330.2,pmgrssssnnpn,no match,,
+underlying_sancara,327.4,330.2,sssnnpn,match,1.0,2.0
+underlying_sancara,330.5,332.7,ssgrg,no match,,
+underlying_full_phrase,330.5,335.2,ssgrgmgmpmggrs,no match,,
+underlying_sancara,332.8,335.2,mgmpmggrs,no match,,
+underlying_sancara,335.3,337.8,pmgrs,no match,,
+underlying_full_phrase,335.3,340.8,pmgrssssnnpn,no match,,
+underlying_sancara,338.1,340.8,sssnnpn,no match,,
+underlying_sancara,341.4,343.6,ssgrg,no match,,
+underlying_full_phrase,341.4,346.4,ssgrgmgmpmggrs,no match,,
+underlying_sancara,343.6,346.4,mgmpmggrs,match,0.0,3.0
+underlying_sancara,352.4,357.1,mmmmmpmgrgm,match,20.0,2.0
+underlying_sancara,357.1,359.5,mnnnsndm,match,17.0,2.0
+underlying_full_phrase,357.1,362.8,mnnnsndmmmgmpmggrs,match,3.0,0.0
+underlying_sancara,359.6,362.8,mmgmpmggrs,match,0.0,5.0
+underlying_sancara,363.1,368.1,mmmmmpmgrgm,match,20.0,1.0
+underlying_sancara,368.2,370.6,mnnnsndm,match,17.0,0.0
+underlying_full_phrase,368.2,373.7,mnnnsndmmmgmpmggrs,no match,,
+underlying_sancara,370.7,373.7,mmgmpmggrs,match,0.0,9.0
+underlying_sancara,374.3,376.4,ssnn,no match,,
+underlying_full_phrase,374.3,381.1,nnnnnnsndmgmnns,no match,,
+underlying_sancara,376.5,379.8,nnnsndmgm,match,11.0,0.0
+underlying_full_phrase,381.5,386.0,sssndmnnsns,match,7.0,0.0
+underlying_sancara,383.0,386.0,nnsns,no match,,
+underlying_sancara,403.5,405.6,ssnn,no match,,
+underlying_full_phrase,403.5,410.6,nnnnnnsndmgmnns,no match,,
+underlying_sancara,405.9,409.2,nnnsndmgm,match,11.0,1.0
+underlying_full_phrase,410.8,414.4,sssndmnnsns,match,7.0,4.0
+underlying_full_phrase,414.4,421.4,nnnnnnsndmgmnns,match,22.0,2.0
+underlying_sancara,416.3,420.0,nnnsndmgm,match,12.0,0.0
+underlying_full_phrase,421.6,425.2,sssndmnnsns,match,7.0,5.0
+underlying_sancara,423.2,425.2,nnsns,match,9.0,3.0
+underlying_full_phrase,425.4,432.0,nnnnnnsndmgmnns,match,22.0,1.0
+underlying_sancara,427.4,430.7,nnnsndmgm,match,12.0,3.0
+underlying_sancara,432.3,435.7,sssndmnnsns,no match,,
+underlying_full_phrase,436.2,441.5,grsssnrsnndmgmn,match,4.0,0.0
+underlying_full_phrase,441.7,446.6,ssnsrsndmmgmpmggrs,match,0.0,0.0
+underlying_sancara,443.6,446.6,mgmpmggrs,match,0.0,0.0
+underlying_full_phrase,446.9,451.9,grsssnrsnndmgmn,match,37.0,1.0
+underlying_full_phrase,452.4,456.9,ssnsrsndmmgmpmggrs,match,0.0,7.0
+underlying_sancara,454.3,456.9,mgmpmggrs,match,0.0,7.0
+underlying_full_phrase,457.8,463.0,grsssnrsnndmgmn,match,37.0,0.0
+underlying_full_phrase,463.2,467.6,ssnsrsndmmgmpmggrs,match,0.0,2.0
+underlying_sancara,465.1,467.6,mgmpmggrs,match,0.0,2.0
+underlying_sancara,470.9,473.4,mnnssss,no match,,
+underlying_sancara,473.4,476.0,nrsnsndm,no match,,
+underlying_full_phrase,473.4,479.6,nrsnsndmgmpmgrgmgmn,no match,,
+underlying_sancara,476.3,478.8,gmpmgrgm,match,19.0,3.0
+underlying_sancara,481.3,484.1,mmgmpgpmgrs,match,2.0,7.0
+underlying_sancara,484.1,487.0,sssnnpn,match,1.0,5.0
+underlying_sancara,508.4,512.2,smmggmggrs,no match,,
