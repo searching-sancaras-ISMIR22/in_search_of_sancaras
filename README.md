@@ -1,9 +1,10 @@
 
+
 ## In Search of Sañcāras - Tradition-Informed Repeated Melodic Pattern Discovery in Carnatic Music
 
 This repository contains the accompanying code for the ISMIR 2022 submission:
 
-`A. Anonymous: In Search of Sañcāras - Tradition Informed Repeated Melodic Pattern Discovery in Carnatic Music. [In Review for] Proceedings of the 23rd International Society for Music Information Retrieval Conference, ISMIR 2022, Bangalore, India.`
+`A. Anonymous: In Search of Sañcāras - Tradition-Informed Repeated Melodic Pattern Discovery in Carnatic Music. [In Review for the] Proceedings of the 23rd International Society for Music Information Retrieval Conference, ISMIR 2022, Bangalore, India.`
 
 ### 1. Results Explorer
 You can explore all results presented in the paper, and more, using the Google Colab notebook  [here](https://colab.research.google.com/drive/115wznvNTr0cdaKN3EBWuCJMz3n-A7P-J?usp=sharing). This includes pitch plots and audio corresponding to the pattern groups returned for a selection of Carnatic performances in the [Saraga Dataset](https://mtg.github.io/saraga/).
@@ -42,14 +43,25 @@ The pipeline requires a model trained using the Complex Autoencoder architecture
 To configure the pipeline update the configuration file at `conf/conf.yaml`, in that folder you will find a README detailing each parameters function.
 
 #### 4.4 Run
-
-To run the pipeline using the parameters specified in `conf/conf.yaml`:
+To extract the silence/stability mask for a pitch track, `<folder>/<pitch_track>.csv`using the parameters specified in `conf/mask.yaml`:
 
 ```
-python src run --config conf/conf.yaml
+python src mask --config conf/mask.yaml
 ```
 
-Output will be stored to folder defined in `conf/conf.yaml`
+To extract the self similarity matrix for a pitch track, `<folder>/<pitch_track>.csv` masked with `<folder>/<mask>.csv` using the parameters specified in `conf/selfsim.yaml`:
+
+```
+python src selfsim --config conf/selfsim.yaml
+```
+
+To run the melodic pattern extraction pipeline using the parameters specified in `conf/pattern.yaml`:
+
+```
+python src pattern --config conf/pattern.yaml
+```
+
+There are more detailed explanations of each parameter in the `conf/` directory.
 
 ### 5. Reproducibility
 
