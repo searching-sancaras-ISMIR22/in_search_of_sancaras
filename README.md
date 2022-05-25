@@ -9,14 +9,18 @@ This repository contains the accompanying code for the ISMIR 2022 submission:
 You can explore all results presented in the paper, and more, using the Google Colab notebook  [here](https://colab.research.google.com/drive/115wznvNTr0cdaKN3EBWuCJMz3n-A7P-J?usp=sharing). This includes pitch plots and audio corresponding to the pattern groups returned for a selection of Carnatic performances in the [Saraga Dataset](https://mtg.github.io/saraga/).
 
 ### 2. Data
-Pitch Tracks
-Features
-Silence/stability masks
-Model
-Source separated audio
-Annotations
-SCV
-Carnatic Melody Synth
+All datasets and models presented in the paper are made available...
+| **Data**                     | **Description**                                                     | **Location**                                |
+|------------------------------|---------------------------------------------------------------------|---------------------------------------------|
+| Annotations                  | Expert annotations of 4 Carnatic performances in SCV                | `data/annotations`                          |
+| Saraga Carnatic Melody Synth | SCMS dataset of synthesized predominant pitch ground-truth          | [zenodo](https://zenodo.org/record/5553925) |
+| Saraga Carnatic Vocal        | SCV dataset of performances for which we have multitrack recordings |                                             |
+| CAE Model                    | Complex Autoencoder (CAE) trained on SCV                            | [link](url)                                 |
+| Pitch Tracks                 | Predominant pitch tracks extracted using FTA-NET trained on SCMS    | `data/pitch_tracks`                         |
+| Silence/Stability Masks      | Mask annotated silent or stable regions in pitch tracks             | `data/silence_stability_masks`              |
+| CAE Features                 | Features for all of Saraga extracted using CAE model trained on SCV | [zenodo](url)                               |
+| Source Separated Audio       | SCV dataset after Spleeter source separation                        | [zenodo](url)                               |
+
 ### 3. Code Usage
 
 #### 3.1 Install
