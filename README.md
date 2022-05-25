@@ -12,7 +12,7 @@ You can explore all results presented in the paper, and more, using the Google C
 All datasets and models presented in the paper are made available...
 | **Data**                     | **Description**                                                     | **Location**                                |
 |------------------------------|---------------------------------------------------------------------|---------------------------------------------|
-| Annotations                  | Expert annotations of 4 Carnatic performances in SCV                | `data/annotations`                          |
+| Annotations                  | Expert annotations of 3 Carnatic performances in SCV                | `data/annotations`                          |
 | Saraga Carnatic Melody Synth | SCMS dataset of synthesized predominant pitch ground-truth          | [zenodo](https://zenodo.org/record/5553925) |
 | Saraga Carnatic Vocal        | SCV dataset of performances for which we have multitrack recordings |                                             |
 | CAE Model                    | Complex Autoencoder (CAE) trained on SCV                            | [link](url)                                 |
@@ -20,6 +20,7 @@ All datasets and models presented in the paper are made available...
 | Silence/Stability Masks      | Mask annotated silent or stable regions in pitch tracks             | `data/silence_stability_masks`              |
 | CAE Features                 | Features for all of Saraga extracted using CAE model trained on SCV | [zenodo](url)                               |
 | Source Separated Audio       | SCV dataset after Spleeter source separation                        | [zenodo](url)                               |
+**Table 1** - All data relevant to task
 
 ### 3. Code Usage
 
@@ -28,7 +29,7 @@ Requires Python 3.8, to install requirements...
 `pip install -r requirements.txt`
 
 #### 3.2 Relevant dependencies
-The pipeline requires a model trained using the Complex Autoencoder architecture [github](https://github.com/SonyCSLParis/cae-invar) and pitch annotations of the predominant melodic line extracted using FTA-NET trained on the SCMS dataset [github](https://github.com/TISMIR22-Carnatic/carnatic-pitch-patterns)  (see **2. Data** for data and models)
+The pipeline requires a model trained using the Complex Autoencoder architecture [github](https://github.com/SonyCSLParis/cae-invar) and pitch annotations of the predominant melodic line extracted using FTA-NET trained on the SCMS dataset [github](https://github.com/TISMIR22-Carnatic/carnatic-pitch-patterns)  (see **Table 1** in **2. Data** for data and models)
 
 #### 3.3 Configure
 
