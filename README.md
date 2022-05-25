@@ -51,6 +51,10 @@ python src run --config conf/conf.yaml
 
 `experiments/` contains various one-off scripts related to the development process and paper. The following are relevant to reproduce the paper results...	
 
+Extract silence/stability masks - `python experiments/mask_extraction.py`
+
+Extract CAE features - `python experiments/cae_features.py`
+
 Gridsearch for optimum parameters - `python experiments/gridsearch.py`
 
 Generate results for performances in paper - `python experiments/get_results.py`
