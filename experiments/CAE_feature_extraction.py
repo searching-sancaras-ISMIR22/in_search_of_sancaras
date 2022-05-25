@@ -4,8 +4,8 @@
 import skimage.io
 
 from convert import *
-from exploration.pitch import *
-from exploration.io import *
+from src.pitch import *
+from src.io import *
 from all_paths import all_paths
 
 run_keyword= 'hpc'

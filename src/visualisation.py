@@ -9,9 +9,9 @@ import numpy.ma as ma
 import scipy.signal
 import shutil
 
-from exploration.pitch import (pitch_seq_to_cents, pitch_to_cents)
-from exploration.utils import get_timestamp, myround
-from exploration.io import create_if_not_exists, write_json
+from src.pitch import (pitch_seq_to_cents, pitch_to_cents)
+from src.utils import get_timestamp, myround
+from src.io import create_if_not_exists, write_json
 
 
 def plot_pitch(

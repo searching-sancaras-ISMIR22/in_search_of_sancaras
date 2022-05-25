@@ -32,7 +32,7 @@ stab = [
 'data/stability_tracks/Vanajaksha Ninne Kori.csv']
 
 import os
-from exploration.pitch import silence_stability_from_file
+from src.pitch import silence_stability_from_file
 for a,s in zip(audio, stab):
 	if os.path.isfile(a) and not os.path.isfile(s):
 		print(a)

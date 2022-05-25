@@ -11,8 +11,8 @@ import essentia.standard as estd
 
 from scipy.ndimage import gaussian_filter1d
 
-from exploration.sequence import get_stability_mask, add_center_to_mask
-from exploration.io import get_timeseries, write_timeseries
+from src.sequence import get_stability_mask, add_center_to_mask
+from src.io import get_timeseries, write_timeseries
 
 def pitch_to_cents(p, tonic):
     """

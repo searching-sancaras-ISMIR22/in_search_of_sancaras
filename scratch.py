@@ -10,23 +10,23 @@ import skimage.io
 from complex_auto.motives_extractor import *
 from complex_auto.motives_extractor.extractor import *
 
-from exploration.pitch import extract_pitch_track
-from exploration.img import (
+from src.pitch import extract_pitch_track
+from src.img import (
     remove_diagonal, convolve_array_tile, binarize, diagonal_gaussian, 
     hough_transform, hough_transform_new, scharr, sobel,
     apply_bin_op, make_symmetric, edges_to_contours)
-from exploration.segments import (
+from src.segments import (
     extract_segments_new, get_all_segments, break_all_segments, do_patterns_overlap, reduce_duplicates, 
     remove_short, extend_segments, join_all_segments, extend_groups_to_mask, group_segments, group_overlapping,
     group_by_distance, trim_silence)
-from exploration.sequence import (
+from src.sequence import (
     apply_exclusions, contains_silence, min_gap, too_stable, 
     convert_seqs_to_timestep, get_stability_mask, add_center_to_mask,
     remove_below_length, extend_to_mask, add_border_to_mask)
-from exploration.evaluation import evaluate, load_annotations_brindha, get_coverage, get_grouping_accuracy
-from exploration.visualisation import plot_all_sequences, plot_pitch, flush_matplotlib
-from exploration.io import load_sim_matrix, write_all_sequence_audio, load_yaml, load_pkl, create_if_not_exists, write_pkl, run_or_cache
-from exploration.pitch import cents_to_pitch, pitch_seq_to_cents, pitch_to_cents, get_timeseries, interpolate_below_length
+from src.evaluation import evaluate, load_annotations_brindha, get_coverage, get_grouping_accuracy
+from src.visualisation import plot_all_sequences, plot_pitch, flush_matplotlib
+from src.io import load_sim_matrix, write_all_sequence_audio, load_yaml, load_pkl, create_if_not_exists, write_pkl, run_or_cache
+from src.pitch import cents_to_pitch, pitch_seq_to_cents, pitch_to_cents, get_timeseries, interpolate_below_length
 
 ### What do we have?
 # Track Names...
@@ -144,23 +144,23 @@ import skimage.io
 from complex_auto.motives_extractor import *
 from complex_auto.motives_extractor.extractor import *
 
-from exploration.pitch import extract_pitch_track
-from exploration.img import (
+from src.pitch import extract_pitch_track
+from src.img import (
     remove_diagonal, convolve_array_tile, binarize, diagonal_gaussian, 
     hough_transform, hough_transform_new, scharr, sobel,
     apply_bin_op, make_symmetric, edges_to_contours)
-from exploration.segments import (
+from src.segments import (
     extract_segments_new, get_all_segments, break_all_segments, do_patterns_overlap, reduce_duplicates, 
     remove_short, extend_segments, join_all_segments, extend_groups_to_mask, group_segments, group_overlapping,
     group_by_distance, trim_silence)
-from exploration.sequence import (
+from src.sequence import (
     apply_exclusions, contains_silence, min_gap, too_stable, 
     convert_seqs_to_timestep, get_stability_mask, add_center_to_mask,
     remove_below_length, extend_to_mask, add_border_to_mask)
-from exploration.evaluation import evaluate, load_annotations_brindha, get_coverage, get_grouping_accuracy
-from exploration.visualisation import plot_all_sequences, plot_pitch, flush_matplotlib
-from exploration.io import load_sim_matrix, write_all_sequence_audio, load_yaml, load_pkl, create_if_not_exists, write_pkl, run_or_cache
-from exploration.pitch import cents_to_pitch, pitch_seq_to_cents, pitch_to_cents, get_timeseries, interpolate_below_length
+from src.evaluation import evaluate, load_annotations_brindha, get_coverage, get_grouping_accuracy
+from src.visualisation import plot_all_sequences, plot_pitch, flush_matplotlib
+from src.io import load_sim_matrix, write_all_sequence_audio, load_yaml, load_pkl, create_if_not_exists, write_pkl, run_or_cache
+from src.pitch import cents_to_pitch, pitch_seq_to_cents, pitch_to_cents, get_timeseries, interpolate_below_length
 
 ### What do we have?
 # Track Names...
@@ -502,7 +502,7 @@ def main(
 
     print(f'    {len(all_segments_extended)} extended segments...')
 
-    from exploration.segments import line_through_points
+    from src.segments import line_through_points
     
     all_segments_extended_reduced = remove_short(all_segments_extended, 1)
 

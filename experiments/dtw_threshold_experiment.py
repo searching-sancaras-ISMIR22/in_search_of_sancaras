@@ -1,5 +1,5 @@
 
-from exploration.segments import *
+from src.segments import *
 print('Grouping Segments')
 
 

@@ -3,7 +3,7 @@ import os
 import shutil
 import tqdm
 
-from exploration.io import create_if_not_exists
+from src.io import create_if_not_exists
 
 def get_all_paths(d):
     p = Path(d)

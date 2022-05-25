@@ -10,7 +10,7 @@ import numpy as np
 import librosa
 import soundfile as sf
 
-from exploration.utils import get_timestamp
+from src.utils import get_timestamp
 
 
 def prepro(X):

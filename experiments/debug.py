@@ -48,7 +48,7 @@ pitch_stability(raw_pitch, time, stable_mask, t1, t2, path)
 
 
 ########## ANNOTATION COMPARISON #####################
-from exploration.visualisation import add_line_to_plot, get_lines, add_annotations_to_plot, add_patterns_to_plot, add_segments_to_plot, join_plots
+from src.visualisation import add_line_to_plot, get_lines, add_annotations_to_plot, add_patterns_to_plot, add_segments_to_plot, join_plots
 import matplotlib
 
 def plot_annotations_and_X(X, annotations, s1, timestep, sr, cqt_window):
