@@ -34,7 +34,7 @@ Requires Python 3.8, to install requirements...
 `pip install -r requirements.txt`
 
 #### 4.2 Relevant dependencies
-The pipeline requires a model trained using the Complex Autoencoder architecture [github](https://github.com/SonyCSLParis/cae-invar) and pitch annotations of the predominant melodic line extracted using FTA-NET trained on the SCMS dataset [github](https://github.com/TISMIR22-Carnatic/carnatic-pitch-patterns)  (see **Table 1** in **2. Data** for data and models)
+The pipeline requires a model trained using the Complex Autoencoder architecture [[github]](https://github.com/SonyCSLParis/cae-invar) and pitch annotations of the predominant melodic line extracted using FTA-NET trained on the SCMS dataset [[github]](https://github.com/TISMIR22-Carnatic/carnatic-pitch-patterns)  (see **Table 1** in **2. Data** for data and models)
 
 #### 4.3 Configure
 
@@ -49,7 +49,7 @@ python src run --config conf/conf.yaml
 ```
 ### 5. Reproducibility
 
-`experiments/` contains various one-off scripts related to the development process and paper. The following are relevant to reproduce the paper results...
+`experiments/` contains various one-off scripts related to the development process and paper. The following are relevant to reproduce the paper results...	
 
 Gridsearch for optimum parameters - `python experiments/gridsearch.py`
 
