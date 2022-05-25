@@ -52,9 +52,14 @@ python src run --config conf/conf.yaml
 `experiments/` contains various one-off scripts related to the development process and paper. The following are relevant to reproduce the paper results...
 
 Gridsearch for optimum parameters - `python experiments/gridsearch.py`
+
 Generate results for performances in paper - `python experiments/get_results.py`
+
 Reproduce plots in paper - `python experiments/plots_for_paper.py`
+
 Generate results for various un-annotated tracks - `python experiments/random_results.py`
+
 Evaluate - `python experiments/evaluate.py`
+
 
 
