@@ -74,11 +74,11 @@ There are more detailed explanations of each parameter in the `conf/` directory.
 
 Results will be saved to the output directory specified in `conf/pattern.yaml`. This directory will contain folder groups of repeated melodic patterns, each folder contains the audios of each pattern and the corresponding pitch plot (Figure 2).
 
-![Occurrence 0, motif group 4, Sharanu Janakana](output/for_paper/pitch_plots/Sharanu%20Janakana/motif_4_len%3D5.4/0_time%3D6min-22.4sec.png?raw=true)
+![Occurrence 1, motif group 2, Sharanu Janakana, pdmmmmgrrgdpmgrssnd](output/for_paper/pitch_plots/Sharanu%20Janakana/motif_2_len%3D9.5/1_time%3D4min-24.89sec.png?raw=true)
 
-**Figure 2** - Sharanu Janakana. Occurrence 0 in motif group 4
+**Figure 2** - Sharanu Janakana. Occurrence 1 in motif group 2 corresponding to the characteristic phrase, pdmmmmgrrgdpmgrssnd.
 
-The y-axis represents cents above the tonic (S), divided into the discrete pitch positions defined in Carnatic music theory for the corresponding rāga. The grey region of the pitch plot corresponds to the returned pattern, the surrounding areas are included to present the pattern within it's melodic context and are not considered part of the returned pattern nor are they included in the associated audio.
+The y-axis represents cents above the tonic (S), divided into the discrete pitch positions defined in Carnatic music theory for the corresponding rāga (in this case, Bilahari). The grey region of the pitch plot corresponds to the returned pattern, the surrounding areas are included to present the pattern within it's melodic context and are not considered part of the returned pattern nor are they included in the associated audio.
 
 Also included in the output directory is an array of start points and lengths for each pattern in each group and - if annotations are passed - the annotations dataframe with a column indiciating whether the corresponding pattern was matched by the process and if so, its group and occurrence number.
 
