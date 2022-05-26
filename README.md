@@ -10,7 +10,8 @@ You can explore all results presented in the paper, and more, using the Google C
 The pitch plots corresponding to the paper results are also available in `ouput/for_paper/pitch_plots/`.
 
 ### 2. Data
-All datasets and models presented in the paper are made available...
+The datasets and models presented in the paper are available at the following...
+
 | **Data**                     | **Description**                                                     | **Location**                                |
 |------------------------------|---------------------------------------------------------------------|---------------------------------------------|
 | Annotations                  | Expert annotations of 3 Carnatic performances in SCV                | `data/annotations`                          |
@@ -22,7 +23,7 @@ All datasets and models presented in the paper are made available...
 | CAE Features                 | Features for all of Saraga extracted using CAE model trained on SCV | [zenodo](url)                               |
 | Source Separated Audio       | SCV dataset after Spleeter source separation                        | [zenodo](url)                               |
 
-**Table 1** - All data relevant to task
+**Table 1** - Data relevant to task
 
 ### 3. Pipeline Overview
 
@@ -48,13 +49,13 @@ To configure the pipeline, update the configuration files in `conf/`. in that fo
 #### 4.4 Run
 
 ##### 4.4.1 Feature Extraction
-To extract the silence/stability mask for a pitch track, `<folder>/<pitch_track>.csv`using the parameters specified in `conf/mask.yaml`:
+To extract the silence/stability mask for a pitch track, `<folder>/<pitch_track>.csv`, using the parameters specified in `conf/mask.yaml`:
 
 ```
 python src mask '<folder>/<pitch_track>.csv' --config 'conf/mask.yaml'
 ```
 
-To extract the self similarity matrix for an audio, `<folder>/<audio>.mp3` masked with `<folder>/<mask>.csv` using the parameters specified in `conf/selfsim.yaml`:
+To extract the self similarity matrix for an audio, `<folder>/<audio>.mp3`, masked with `<folder>/<mask>.csv`, using the parameters specified in `conf/selfsim.yaml`:
 
 ```
 python src selfsim '<folder>/<audio>.mp3' '<folder>/<mask>.csv' --config 'conf/selfsim.yaml'
@@ -80,7 +81,7 @@ Results will be saved to the output directory specified in `conf/pattern.yaml`. 
 
 The y-axis represents cents above the tonic (S), divided into the discrete pitch positions defined in Carnatic music theory for the corresponding rāga (in this case, Bilahari). The grey region of the pitch plot corresponds to the returned pattern, the surrounding areas are included to present the pattern within it's melodic context and are not considered part of the returned pattern nor are they included in the associated audio.
 
-Also included in the output directory is an array of start points and lengths for each pattern in each group and - if annotations are passed - the annotations dataframe with a column indiciating whether the corresponding pattern was matched by the process and if so, its group and occurrence number.
+Also included in the output directory is an array of start points and lengths for each pattern in each group and - if annotations are passed - the annotations dataframe with a column indicating whether the corresponding pattern was matched by the process and if so, its group and occurrence number.
 
 All outputs can be switched on/off in `conf/pattern.yaml`
 
