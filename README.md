@@ -26,7 +26,7 @@ All datasets and models presented in the paper are made available...
 
 ### 3. Overview of Process
 
-![**Figure 1** - Overview of pipeline](https://https://github.com/searching-sancaras-ISMIR22/searching_for_sancaras/blob/main/plots_for_paper/schematic.png?raw=true)
+![**Figure 1** - Overview of pipeline](./plots_for_paper/schematic.png?raw=true)
 
 
 ### 4. Code Usage
