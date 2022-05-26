@@ -46,6 +46,8 @@ The pipeline requires a model trained using the Complex Autoencoder architecture
 To configure the pipeline, update the configuration files in `conf/`. in that folder you will find more details on each parameters function.
 
 #### 4.4 Run
+
+##### 4.4.1 Feature Extraction
 To extract the silence/stability mask for a pitch track, `<folder>/<pitch_track>.csv`using the parameters specified in `conf/mask.yaml`:
 
 ```
@@ -58,6 +60,8 @@ To extract the self similarity matrix for an audio, `<folder>/<audio>.mp3` maske
 python src selfsim '<folder>/<audio>.mp3' '<folder>/<mask>.csv' --config 'conf/selfsim.yaml'
 ```
 
+##### 4.4.1 Pattern Discovery
+
 To run the melodic pattern extraction pipeline using the parameters specified in `conf/pattern.yaml`:
 
 ```
@@ -65,6 +69,20 @@ python src pattern --config conf/pattern.yaml
 ```
 
 There are more detailed explanations of each parameter in the `conf/` directory.
+
+##### 4.4.2 Output
+
+Results will be saved to the output directory specified in `conf/pattern.yaml`. This directory will contain folder groups of repeated melodic patterns, each folder contains the audios of each pattern and the corresponding pitch plot (Figure 2).
+
+![Occurrence 0, motif group 4, Sharanu Janakana](output/for_paper/pitch_plots/Sharanu%20Janakana/motif_4_len%3D5.4/0_time%3D6min-22.4sec.png?raw=true)
+
+**Figure 2** - Sharanu Janakana. Occurrence 0 in motif group 4
+
+The grey region of the pitch plot corresponds to the returned pattern, the surrounding areas are included to present the pattern within it's melodic context and are not considered part of the returned pattern nor are they included in the associated audio.
+
+Also included in the output directory is an array of start points and lengths for eeach pattern in each group and - if annotations are passed - the annotations dataframe with a column indiciating whether the corresponding pattern was matched by the process and if so, its group and occurrence number.
+
+All outputs can be switched on/off in `conf/pattern.yaml`
 
 ### 5. Reproducibility
 
