@@ -44,7 +44,7 @@ The pipeline requires a model trained using the Complex Autoencoder architecture
 
 #### 4.3 Configure
 
-To configure the pipeline, update the configuration files in `conf/`. in that folder you will find more details on each parameters function.
+To configure the pipeline, update the configuration files in `conf/`. In that folder you will find more details on each parameters function.
 
 #### 4.4 Run
 
