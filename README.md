@@ -5,7 +5,7 @@ This repository contains the accompanying code for the ISMIR 2022 submission:
 `A. Anonymous: In Search of Sañcāras - Tradition-Informed Repeated Melodic Pattern Recognition in Carnatic Music. [In Review for the] Proceedings of the 23rd International Society for Music Information Retrieval Conference, ISMIR 2022, Bangalore, India.`
 
 ### 1. Results Explorer
-You can explore all results presented in the paper, and more, using the Google Colab notebook  [here](https://colab.research.google.com/drive/115wznvNTr0cdaKN3EBWuCJMz3n-A7P-J?usp=sharing). This includes pitch plots and audio corresponding to the pattern groups returned for a selection of Carnatic performances in the [Saraga Dataset](https://mtg.github.io/saraga/).
+You can explore all results presented in the paper, and more, using the Google Colab notebook [here](https://colab.research.google.com/drive/115wznvNTr0cdaKN3EBWuCJMz3n-A7P-J?usp=sharing). This includes pitch plots and audio corresponding to the pattern groups returned for a selection of Carnatic performances in the [Saraga Dataset](https://mtg.github.io/saraga/).
 
 The pitch plots corresponding to the paper results are also available in `ouput/for_paper/pitch_plots/`.
 
@@ -15,7 +15,7 @@ All datasets and models presented in the paper are made available...
 |------------------------------|---------------------------------------------------------------------|---------------------------------------------|
 | Annotations                  | Expert annotations of 3 Carnatic performances in SCV                | `data/annotations`                          |
 | Saraga Carnatic Melody Synth | SCMS dataset of synthesized predominant pitch ground-truth          | [zenodo](https://zenodo.org/record/5553925) |
-| Saraga Carnatic Vocal        | SCV dataset of performances for which we have multitrack recordings |                                             |
+| Saraga Carnatic Vocal        | SCV dataset of performances for which we have multitrack recordings | [link](url)								   |
 | CAE Model                    | Complex Autoencoder (CAE) trained on SCV                            | [link](url)                                 |
 | Pitch Tracks                 | Predominant pitch tracks extracted using FTA-NET trained on SCMS    | `data/pitch_tracks`                         |
 | Silence/Stability Masks      | Mask annotated silent or stable regions in pitch tracks             | `data/silence_stability_masks`              |
@@ -26,7 +26,9 @@ All datasets and models presented in the paper are made available...
 
 ### 3. Overview of Process
 
-![**Figure 1** - Overview of pipeline](./plots_for_paper/schematic.png?raw=true "**Figure 1** - Overview of pipeline")
+![Overview of pipeline](./plots_for_paper/schematic.png?raw=true)
+
+**Figure 1** - Overview of pipeline
 
 
 ### 4. Code Usage
@@ -41,19 +43,19 @@ The pipeline requires a model trained using the Complex Autoencoder architecture
 
 #### 4.3 Configure
 
-To configure the pipeline update the configuration file at `conf/conf.yaml`, in that folder you will find a README detailing each parameters function.
+To configure the pipeline, update the configuration files in `conf/`. in that folder you will find more details on each parameters function.
 
 #### 4.4 Run
 To extract the silence/stability mask for a pitch track, `<folder>/<pitch_track>.csv`using the parameters specified in `conf/mask.yaml`:
 
 ```
-python src mask --config conf/mask.yaml
+python src mask '<folder>/<pitch_track>.csv' --config 'conf/mask.yaml'
 ```
 
-To extract the self similarity matrix for a pitch track, `<folder>/<pitch_track>.csv` masked with `<folder>/<mask>.csv` using the parameters specified in `conf/selfsim.yaml`:
+To extract the self similarity matrix for an audio, `<folder>/<audio>.mp3` masked with `<folder>/<mask>.csv` using the parameters specified in `conf/selfsim.yaml`:
 
 ```
-python src selfsim --config conf/selfsim.yaml
+python src selfsim '<folder>/<audio>.mp3' '<folder>/<mask>.csv' --config 'conf/selfsim.yaml'
 ```
 
 To run the melodic pattern extraction pipeline using the parameters specified in `conf/pattern.yaml`:
