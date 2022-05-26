@@ -26,7 +26,8 @@ All datasets and models presented in the paper are made available...
 
 ### 3. Overview of Process
 
-Include diagram here
+![**Figure 1** - Overview of pipeline](https://https://github.com/searching-sancaras-ISMIR22/searching_for_sancaras/blob/main/plots_for_paper/schematic.png?raw=true)
+
 
 ### 4. Code Usage
 
@@ -65,7 +66,7 @@ There are more detailed explanations of each parameter in the `conf/` directory.
 
 ### 5. Reproducibility
 
-`experiments/` contains various one-off scripts related to the development process and paper. The following are relevant to reproduce the paper results...	
+`experiments/` contains various one-off scripts related to the development process and paper. The following are relevant to reproducing the results in the paper...	
 
 Extract silence/stability masks - `python experiments/mask_extraction.py`
 
