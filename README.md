@@ -24,7 +24,7 @@ All datasets and models presented in the paper are made available...
 
 **Table 1** - All data relevant to task
 
-### 3. Overview of Process
+### 3. Pipeline Overview
 
 ![Overview of pipeline](./plots_for_paper/schematic.png?raw=true)
 
