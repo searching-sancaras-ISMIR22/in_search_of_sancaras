@@ -78,9 +78,9 @@ Results will be saved to the output directory specified in `conf/pattern.yaml`. 
 
 **Figure 2** - Sharanu Janakana. Occurrence 0 in motif group 4
 
-The grey region of the pitch plot corresponds to the returned pattern, the surrounding areas are included to present the pattern within it's melodic context and are not considered part of the returned pattern nor are they included in the associated audio.
+The y-axis represents cents above the tonic (S), divided into the discrete pitch positions defined in Carnatic music theory for the corresponding rāga. The grey region of the pitch plot corresponds to the returned pattern, the surrounding areas are included to present the pattern within it's melodic context and are not considered part of the returned pattern nor are they included in the associated audio.
 
-Also included in the output directory is an array of start points and lengths for eeach pattern in each group and - if annotations are passed - the annotations dataframe with a column indiciating whether the corresponding pattern was matched by the process and if so, its group and occurrence number.
+Also included in the output directory is an array of start points and lengths for each pattern in each group and - if annotations are passed - the annotations dataframe with a column indiciating whether the corresponding pattern was matched by the process and if so, its group and occurrence number.
 
 All outputs can be switched on/off in `conf/pattern.yaml`
 
