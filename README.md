@@ -14,12 +14,12 @@ The datasets and models presented in the paper are available at the following...
 
 | **Data**                     | **Description**                                                     | **Location**                                |
 |------------------------------|---------------------------------------------------------------------|---------------------------------------------|
-| Annotations                  | Expert annotations of 3 Carnatic performances in SCV                | [`annotations/`](annotations/)              |
+| Annotations                  | Expert annotations of 3 Carnatic performances in SCV                | [`annotations/`](https://github.com/searching-sancaras-ISMIR22/searching_for_sancaras/tree/main/annotations)              |
 | Saraga Carnatic Melody Synth | SCMS dataset of synthesized predominant pitch ground-truth          | [zenodo](https://zenodo.org/record/5553925) |
 | Saraga Carnatic Vocal        | SCV dataset of performances for which we have multitrack recordings | [link](url)								   |
 | CAE Model                    | Complex Autoencoder (CAE) trained on SCV                            | [link](url)                                 |
-| Pitch Tracks                 | Predominant pitch tracks extracted using FTA-NET trained on SCMS    | `data/pitch_tracks`                         |
-| Silence/Stability Masks      | Mask annotated silent or stable regions in pitch tracks             | `data/silence_stability_masks`              |
+| Pitch Tracks                 | Predominant pitch tracks extracted using FTA-NET trained on SCMS    | [`data/pitch_tracks`](https://github.com/searching-sancaras-ISMIR22/searching_for_sancaras/tree/main/data/pitch_tracks)                         |
+| Silence/Stability Masks      | Mask annotated silent or stable regions in pitch tracks             | [`data/stability_tracks`](https://github.com/searching-sancaras-ISMIR22/searching_for_sancaras/tree/main/data/stability_tracks)              |
 | CAE Features                 | Features for all of Saraga extracted using CAE model trained on SCV | [zenodo](url)                               |
 | Source Separated Audio       | SCV dataset after Spleeter source separation                        | [zenodo](url)                               |
 
