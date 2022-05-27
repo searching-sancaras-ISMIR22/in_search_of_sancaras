@@ -105,6 +105,6 @@ Evaluate - `python experiments/evaluate.py`
 
 ### 6. References
 
-[1] Yu, S., Sun, X., Yu, Y., and Li, W. (May, 2021). Frequency-Temporal Attention Network for Singing Melody Extraction. Paper presented at the IEEE In- ternational Conference on Acoustics, Speech and Signal Processing (ICASSP), Toronto, Canada.
+[1] Yu, S., Sun, X., Yu, Y., and Li, W. (May, 2021). Frequency-Temporal Attention Network for Singing Melody Extraction. Paper presented at the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Toronto, Canada.
 
-[2] S. Lattner, A. Arzt, and M. Dörfler, “Learning complex basis functions for invariant representations of audio,” Proceedings of the 20th International Society for Mu- sic Information Retrieval Conference (ISMIR), Delft, The Netherlands, 2019.
+[2] S. Lattner, A. Arzt, and M. Dörfler, “Learning complex basis functions for invariant representations of audio,” Proceedings of the 20th International Society for Music Information Retrieval Conference (ISMIR), Delft, The Netherlands, 2019.
