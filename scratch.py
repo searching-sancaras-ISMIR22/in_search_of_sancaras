@@ -18,7 +18,7 @@ from src.img import (
 from src.segments import (
     extract_segments_new, get_all_segments, break_all_segments, do_patterns_overlap, reduce_duplicates, 
     remove_short, extend_segments, join_all_segments, extend_groups_to_mask, group_segments, group_overlapping,
-    group_by_distance, trim_silence)
+    group_by_distance, trim_silence, sparse_to_orig)
 from src.sequence import (
     apply_exclusions, contains_silence, min_gap, too_stable, 
     convert_seqs_to_timestep, get_stability_mask, add_center_to_mask,
@@ -506,104 +506,8 @@ def main(
     
     all_segments_extended_reduced = remove_short(all_segments_extended, 1)
 
-    print('Converting sparse segment indices to original')
-    boundaries_sparse = [x for x in boundaries_sparse if x != 0]
-    all_segments_scaled_x = []
-    for seg in all_segments_extended_reduced:
-        ((x0, y0), (x1, y1)) = seg
-        get_x, get_y = line_through_points(x0, y0, x1, y1)
-        
-        boundaries_in_x = sorted([i for i in boundaries_sparse if i >= x0 and i <= x1])
-        current_x0 = x0
-        if boundaries_in_x:
-            for b in boundaries_in_x:
-                x0_ = current_x0
-                x1_ = b-1
-                y0_ = int(get_y(x0_))
-                y1_ = int(get_y(x1_))
-                all_segments_scaled_x.append(((x0_, y0_), (x1_, y1_)))
-                current_x0 = b+1
-
-            if current_x0 > x1:
-                x0_ = current_x0
-                x1_ = x1
-                y0_ = int(get_y(x0_))
-                y1_ = int(get_y(x1_))
-                all_segments_scaled_x.append(((x0_, y0_), (x1_, y1_)))
-        else:
-            all_segments_scaled_x.append(((x0, y0), (x1, y1)))
+    all_segments_converted = sparse_to_orig(all_segments_extended_reduced, boundaries_sparse, sparse_orig_lookup, s1)
     
-    all_segments_scaled_x_reduced = remove_short(all_segments_scaled_x, 1)
-
-    all_segments_scaled = []
-    for seg in all_segments_scaled_x_reduced:
-        ((x0, y0), (x1, y1)) = seg
-        get_x, get_y = line_through_points(x0, y0, x1, y1)
-        
-        boundaries_in_y = sorted([i for i in boundaries_sparse if i >= y0 and i <= y1])
-        current_y0 = y0
-        if boundaries_in_y:
-            for b in boundaries_in_y:
-                y0_ = current_y0
-                y1_ = b-1
-                x0_ = int(get_x(y0_))
-                x1_ = int(get_x(y1_))
-                all_segments_scaled.append(((x0_, y0_), (x1_, y1_)))
-                current_y0 = b+1
-            
-            if current_y0 < y1:
-                y0_ = current_y0
-                y1_ = y1
-                x0_ = int(get_x(y0_))
-                x1_ = int(get_x(y1_))
-                all_segments_scaled.append(((x0_, y0_), (x1_, y1_)))
-        else:
-            all_segments_scaled.append(((x0, y0), (x1, y1)))
-
-    all_segments_scaled_reduced = remove_short(all_segments_scaled, 1)
-
-    all_segments_converted = []
-
-    de = 0 if s1 is None else s1
-        
-    for i, seg in enumerate(all_segments_scaled_reduced):
-        ((x0, y0), (x1, y1)) = seg
-        while (x0 in boundaries_sparse) or (x1 in boundaries_sparse) or (y0 in boundaries_sparse) or (y1 in boundaries_sparse):
-            if x0 in boundaries_sparse:
-                get_x, get_y = line_through_points(x0, y0, x1, y1)
-                x0 = x0+1
-                x1 = x1
-                y0 = round(get_y(x0))
-                y1 = round(get_y(x1))
-
-            if x1 in boundaries_sparse:
-                get_x, get_y = line_through_points(x0, y0, x1, y1)
-                x0 = x0
-                x1 = x1-1
-                y0 = round(get_y(x0))
-                y1 = round(get_y(x1))
-
-            if y0 in boundaries_sparse:
-                get_x, get_y = line_through_points(x0, y0, x1, y1)
-                y0 = y0+1
-                y1 = y1
-                x0 = round(get_x(y0))
-                x1 = round(get_x(y1))
-
-            if y1 in boundaries_sparse:
-                get_x, get_y = line_through_points(x0, y0, x1, y1)
-                y0 = y0
-                y1 = y1-1
-                x0 = round(get_x(y0))
-                x1 = round(get_x(y1))
-
-        x0_ = sparse_orig_lookup[x0+de]
-        y0_ = sparse_orig_lookup[y0+de]
-        x1_ = sparse_orig_lookup[x1+de]
-        y1_ = sparse_orig_lookup[y1+de]
-        all_segments_converted.append(((x0_, y0_), (x1_, y1_)))
-    
-
     #   [(i,(get_grad(x),get_grad(y))) for i,(x,y) in enumerate(zip(all_segments_scaled_reduced, all_segments_converted)) if get_grad(x) != get_grad(y)]
 
     #   get_grad = lambda y: (y[1][1]-y[0][1])/(y[1][0]-y[0][0])
