@@ -15,8 +15,6 @@ import sys
 
 import traceback
 
-from credentials import settings
-
 sys.path.append('../../../')
 
 

@@ -40,6 +40,48 @@ def load_annotations_brindha(annotations_path, min_m=None, max_m=None):
     return annotations_orig[['tier', 's1', 's2', 'text']]
 
 
+def load_annotations_new(annotations_path, min_m=None, max_m=None):
+
+    annotations_orig = pd.read_csv(annotations_path, sep='\t')
+    annotations_orig.columns = ['tier', 'not_used', 's1', 's2', 'duration', 'text']
+    
+    annotations_orig['s1'] = pd.to_datetime(annotations_orig['s1']).apply(lambda y: y.time())
+    annotations_orig['s2'] = pd.to_datetime(annotations_orig['s2']).apply(lambda y: y.time())
+    annotations_orig['duration'] = pd.to_datetime(annotations_orig['duration']).apply(lambda y: y.time())
+
+    annotations_orig['s1'] = annotations_orig['s1'].apply(lambda y: y.hour*120 + y.minute*60 + y.second + y.microsecond*10e-7)
+    annotations_orig['s2'] = annotations_orig['s2'].apply(lambda y: y.hour*120 + y.minute*60 + y.second + y.microsecond*10e-7)
+    annotations_orig['duration'] = annotations_orig['duration'].apply(lambda y: y.hour*120 + y.minute*60 + y.second + y.microsecond*10e-7)
+    
+    annotations_orig['s1'] = annotations_orig['s1'].apply(lambda y: round(y,1))
+    annotations_orig['s2'] = annotations_orig['s2'].apply(lambda y: round(y,1))
+    
+
+    if min_m:
+        annotations_orig = annotations_orig[annotations_orig['duration'].astype(float)>=min_m]
+    if max_m:
+        annotations_orig = annotations_orig[annotations_orig['duration'].astype(float)<=max_m]
+
+
+    annotations_underlying = annotations_orig[annotations_orig['tier'].isin(['underlying_full_phrase','underlying_sancara', 'root_full_phrase','root_sancara'])]
+    annotations_true = annotations_orig[annotations_orig['tier'].isin(['full_phrase','sancara'])]
+
+    annotations_merge = annotations_underlying.merge(annotations_true, on=['s1','s2'], suffixes=('_u','_t'), how='left')
+
+    annotations_merge.columns = ['tier', 'not_used_u', 's1', 's2', 'duration', 'text', 'tier_t', 'not_used_t', 'duration_t', 'text_full']
+    annotations_merge = annotations_merge[['tier', 's1', 's2', 'duration', 'text', 'text_full']]
+
+    good_text = [k for k,v in Counter(annotations_merge['text']).items() if v>1]
+    annotations_good = annotations_merge[annotations_merge['text'].isin(good_text)]
+
+    #annotations_good = annotations_good[annotations_good['s2']- annotations_good['s1']>=1]
+    annotations_good['tier'] = annotations_good['tier'].apply(lambda y: y.replace('root','underlying'))
+
+    annotations_good = annotations_good.groupby(['s1','s2']).first().reset_index()
+
+    return annotations_good[['tier', 's1', 's2', 'text', 'text_full']]
+
+
 
 def get_coverage(pitch, starts_seq_exc, lengths_seq_exc):
     pitch_coverage = pitch.copy()

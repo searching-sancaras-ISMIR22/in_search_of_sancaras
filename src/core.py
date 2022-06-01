@@ -1,7 +1,7 @@
-import skimage.io
+import os
 
-from complex_auto.motives_extractor import *
-from complex_auto.motives_extractor.extractor import *
+import numpy as np
+import skimage.io
 
 from src.img import (
     remove_diagonal, convolve_array_tile, binarize, diagonal_gaussian, 
@@ -27,8 +27,7 @@ def run_pipeline(
     bin_thresh_segment, perc_tail,  gauss_sigma, cont_thresh,
     etc_kernel_size, binop_dim, min_diff_trav, min_pattern_length_seconds,
     min_in_group, match_tol, ext_mask_tol, n_dtw, thresh_dtw, thresh_cos,
-    dupl_perc_overlap, exclusion_functions,
-    annotations_path, partial_perc, top_n, write_plots, 
+    dupl_perc_overlap, annotations_path, partial_perc, top_n, write_plots, 
     write_audio, write_patterns, write_annotations, plot=False):
     if write_annotations and not annotations_path:
         print('WARNING: write_annotations==True but no annotations path has been passed, annotations will not be written')
