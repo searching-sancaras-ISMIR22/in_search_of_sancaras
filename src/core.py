@@ -340,7 +340,7 @@ def run_pipeline(
             print('No audio path defined in conf - not writing audio')
         try:
             write_all_sequence_audio(audio_path, starts[:top_n], lengths[:top_n], timestep, results_dir)
-        except IOError as e:
+        except FileNotFoundError as e:
             print('WARNING: Audio writing failed, error...')
             print(e)
     
