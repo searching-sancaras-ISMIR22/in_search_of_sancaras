@@ -39,8 +39,8 @@ mukhari:
   avorahana: ['S', 'N2', 'D1', 'P', 'M1', 'G2', 'R2','S']
 
 sankarabharanam:
-  arohana: ['S', 'R2', 'G3', 'P', 'D2', 'P', 'D2', 'S']
-  avorahana: ['N3', 'D2', 'P', 'G3', 'M1', 'G3', 'R2', 'S', 'N3', 'D2', 'P', 'D2', 'S']
+  arohana: ['S', 'R2', 'G3', 'M1', 'P', 'D2', 'N3' 'S']
+  avorahana: ['S', 'N3', 'D2', 'P', 'M1', 'G3', 'R2', 'S']
 
 shanmukhapriya:
   arohana: ['S', 'R2', 'G2', 'M2', 'P', 'D1', 'N2', 'S']

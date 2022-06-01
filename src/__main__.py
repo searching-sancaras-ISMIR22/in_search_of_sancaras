@@ -17,6 +17,7 @@ def cmd_mask(conf_path):
     conf = load_yaml(conf_path)
     recall, precision, f1, grouping_accuracy, group_distribution, annotations, starts_sec, lengths_sec = run_pipeline(**conf)
 
+
 @cli.command(name="selfsim")
 @click.option('--conf-path', type=str, default='conf/mask.yaml', required=False)
 def cmd_selfsim(audio, mask, conf_path):
@@ -26,6 +27,7 @@ def cmd_selfsim(audio, mask, conf_path):
     """
     conf = load_yaml(conf_path)
     #compute_selfsim(**conf)
+
 
 @cli.command(name="pattern")
 @click.option('--conf-path', type=str, default='conf/mask.yaml', required=False)
