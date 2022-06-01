@@ -28,7 +28,7 @@ def run_pipeline(
     etc_kernel_size, binop_dim, min_diff_trav, min_pattern_length_seconds,
     min_in_group, match_tol, ext_mask_tol, n_dtw, thresh_dtw, thresh_cos,
     dupl_perc_overlap, annotations_path, partial_perc, top_n, write_plots, 
-    write_audio, write_patterns, write_annotations, plot=False):
+    audio_path, write_audio, write_patterns, write_annotations, plot=False):
     if write_annotations and not annotations_path:
         print('WARNING: write_annotations==True but no annotations path has been passed, annotations will not be written')
     ## Get Data
@@ -57,7 +57,6 @@ def run_pipeline(
         boundaries_sparse = [x-s1 for x in metadata['boundaries_sparse']]
     else:
         boundaries_sparse = metadata['boundaries_sparse']
-    audio_path = metadata['audio_path']
     pitch_path = metadata['pitch_path']
     stability_path = metadata['stability_path']
     raga = metadata['raga']
@@ -337,7 +336,13 @@ def run_pipeline(
         plot_all_sequences(raw_pitch, time, lengths[:top_n], starts[:top_n], results_dir, clear_dir=True, plot_kwargs=plot_kwargs)
     
     if write_audio:
-        write_all_sequence_audio(audio_path, starts[:top_n], lengths[:top_n], timestep, results_dir)
+        if not audio_path:
+            print('No audio path defined in conf - not writing audio')
+        try:
+            write_all_sequence_audio(audio_path, starts[:top_n], lengths[:top_n], timestep, results_dir)
+        except IOError as e:
+            print('WARNING: Audio writing failed, error...')
+            print(e)
     
     if write_patterns:
         write_pkl(lengths[:top_n], os.path.join(results_dir, 'lengths.pkl'))

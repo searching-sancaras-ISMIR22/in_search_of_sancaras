@@ -69,6 +69,8 @@ partial_perc: 0.66 # how much overlap does an annotated and identified pattern n
 # limit the number of groups outputted
 top_n: 1000
 
+# output
+audio_path: 'path/to/audio.mp3' # must be defined if we want to write audio
 write_plots: True
 write_audio: True
 write_patterns: True
